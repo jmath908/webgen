@@ -25,7 +25,6 @@ let fetchCohortData = async function () {
 
 let fillCancerTypeSelectBox = async function () {
   let cancerTypesQuery = await fetchCohortData();
-  cancerTypesQuery.sort();
   let selectBox = document.getElementById("cancerTypeMultipleSelection");
   for (let i = 0; i < cancerTypesQuery.length; i++) {
     let currentOption = document.createElement("option");
